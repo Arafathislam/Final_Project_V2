@@ -7,4 +7,6 @@ urlpatterns = [
     path('product/<int:pk>/',views.ProductDetails.as_view() ),
     path('customers/',views.CustomerList.as_view() ),
     path('customer/<int:pk>/',views.CustomerDetails.as_view() ),
+    path('orders/',views.OrderList.as_view() ),
+    path('order-detail/<int:pk>/',views.OrderDetails.as_view() ),
 ]
