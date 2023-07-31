@@ -3,6 +3,8 @@ from . import serializers
 from rest_framework import generics,permissions,pagination,viewsets
 from . import models
 # Create your views here.
+
+#Vendor
 class VendorList(generics.ListCreateAPIView):
     queryset=models.Vendor.objects.all()
     serializer_class=serializers.VendorSerializer
@@ -60,6 +62,14 @@ class ProductRatingViewSet(viewsets.ModelViewSet):
     serializer_class=serializers.ProductRatingSerializer
     queryset=models.ProductReting.objects.all()
 
+#Category
+class CategoryList(generics.ListCreateAPIView):
+    queryset=models.ProductCategory.objects.all()
+    serializer_class=serializers.CategorySerializer
+    
 
+class CategoryDetails(generics.RetrieveUpdateDestroyAPIView):
+    queryset=models.ProductCategory.objects.all()
+    serializer_class=serializers.CategoryDetailsSerializer
 
 
