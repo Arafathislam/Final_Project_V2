@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../../src/logo.svg'
-import Sidebar from './Sidebar'
-const Dashboard = (props) => {
+import SellerSidebar from './SellerSidebar'
+const SellerDashboard = (props) => {
     return (
         <>
             <div className="container mt-4">
@@ -10,11 +10,20 @@ const Dashboard = (props) => {
 
                 <div className="row">
                     <div className="col-md-3 col-12 mb-2">
-                        <Sidebar/>
+                        <SellerSidebar/>
                     </div>
 
                     <div className="col-md-9 col-12 mb-2">
                       <div className="row">
+                        <div className="col-md-4 mb-2">
+                            <div className="card">
+                                <div className="card-body text-center">
+                                    <h4>Total Products</h4>
+                                    <h4><Link to="#">123333333</Link></h4>
+
+                                </div>
+                            </div>
+                        </div>
                         <div className="col-md-4 mb-2">
                             <div className="card">
                                 <div className="card-body text-center">
@@ -24,20 +33,11 @@ const Dashboard = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4 mb-2">
-                            <div className="card">
-                                <div className="card-body text-center">
-                                    <h4>Total Wishlist</h4>
-                                    <h4><Link to="#">123</Link></h4>
-
-                                </div>
-                            </div>
-                        </div>
 
                         <div className="col-md-4 mb-2">
                             <div className="card">
                                 <div className="card-body text-center">
-                                    <h4>Total Addresses</h4>
+                                    <h4>Total Customers</h4>
                                     <h4><Link to="#">12</Link></h4>
 
                                 </div>
@@ -58,4 +58,4 @@ const Dashboard = (props) => {
     )
 }
 
-export default Dashboard
+export default SellerDashboard

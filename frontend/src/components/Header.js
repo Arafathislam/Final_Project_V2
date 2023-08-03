@@ -32,12 +32,33 @@ const Header = () => {
             <li><hr className="dropdown-divider"/></li>
             
             <li><Link to="/customer/dashboard"className="dropdown-item" href="#">Dashboard</Link></li>
-            <li><Link to="/customer/dashboard"className="dropdown-item" href="#">Logout</Link></li>
+            <li><Link to="/customer/login"className="dropdown-item" href="#">Logout</Link></li>
           </ul>
         </li>
 
+        {/* seller dropdown */}
+
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Seller Panel
+          </a>
+          <ul className="dropdown-menu">
+            <li><Link to="/seller/register" className="dropdown-item" href="#">Register</Link></li>
+            <li><Link to="/seller/login" className="dropdown-item" href="#">Login</Link></li>
+            <li><hr className="dropdown-divider"/></li>
+            
+            <li><Link to="/seller/dashboard"className="dropdown-item" href="#">Dashboard</Link></li>
+            <li><Link to="/seller/login"className="dropdown-item" href="#">Logout</Link></li>
+          </ul>
+        </li>
+
+
         <li className="nav-item">
-          <Link className="nav-link" aria-current="page" to="/checkout">My Cart(4)</Link>
+          <Link className="nav-link" aria-current="page" to="/checkout">New Orders (4)</Link>
+        </li>
+
+        <li className="nav-item">
+          <Link className="nav-link" aria-current="page" to="/checkout">My Cart (4)</Link>
         </li>
 
       </ul>

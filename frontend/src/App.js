@@ -26,12 +26,24 @@ import Orders from './components/Customer/Orders';
 import Wishlist from './components/Customer/Wishlist';
 import Profile from './components/Customer/Profile';
 import ChangePassword from './components/Customer/ChangePassword';
+import AddressList from './components/Customer/AddressList';
+import AddAddress from './components/Customer/AddAddress';
+
+// seller panel
+import SellerRegister from './components/Seller/SellerRegister';
+import  SellerLogin from './components/Seller/SellerLogin';
+import  SellerDashboard from './components/Seller/SellerDashboard';
+import SellerProducts from './components/Seller/SellerProducts';
+import SellerAddProducts from './components/Seller/SellerAddProducts';
+
 function App() {
   return (
     <>
 
       <Header />
       <Routes>
+        {/* website routes */}
+
         <Route path='/' element={<Home/>}/>
         <Route path='/categories' element={<Categories/>}/>
         <Route path='/products' element={<AllProducts/>}/>
@@ -40,6 +52,9 @@ function App() {
         <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/order/success' element={<OrderSuccess/>}/>
         <Route path='/order/failure' element={<OrderFailure/>}/>
+
+        {/* customer routes */}
+
         <Route path='/customer/register' element={<Register/>}/>
         <Route path='/customer/login' element={<Login/>}/>
         <Route path='/customer/dashboard' element={<Dashboard/>}/>
@@ -47,6 +62,20 @@ function App() {
         <Route path='/customer/wishlist' element={<Wishlist/>}/>
         <Route path='/customer/profile' element={<Profile/>}/>
         <Route path='/customer/changepassword' element={<ChangePassword/>}/>
+        <Route path='/customer/address' element={<AddressList/>}/>
+        <Route path='/customer/addaddress' element={<AddAddress/>}/>
+
+
+      {/* Seller Routes */}
+
+      <Route path='/seller/register' element={<SellerRegister/>}/>
+        <Route path='/seller/login' element={<SellerLogin/>}/>
+        <Route path='/seller/dashboard' element={<SellerDashboard/>}/>
+        <Route path='/seller/products' element={<SellerProducts/>}/>
+        <Route path='/seller/addproducts' element={<SellerAddProducts/>}/>
+
+
+
       </Routes>
      
       <Footer/>
