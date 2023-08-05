@@ -40,7 +40,7 @@ const Header = () => {
 
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Seller Panel
+            Vendor Panel
           </a>
           <ul className="dropdown-menu">
             <li><Link to="/seller/register" className="dropdown-item" href="#">Register</Link></li>

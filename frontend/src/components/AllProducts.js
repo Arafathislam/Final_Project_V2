@@ -2,7 +2,38 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../src/logo.svg'
 import SingleProduct from './SingleProduct'
+import { useState,useEffect } from 'react'
 const AllProducts = () => {
+
+   const products =[
+
+    {
+      'title':'python',
+      'price':100
+    },
+    {
+      'title':'django',
+      'price':120
+    },
+    {
+      'title':'flask',
+      'price':300
+    },
+    
+   ]
+
+   const [Products,setProducts]=useState([])
+useEffect(()=>{
+fetchData('http://127.0.0.1:8000/api/products/')
+
+})
+
+function fetchData(baseurl){
+  fetch(baseurl)
+     .then((response) =>response.json())
+     .then((data)=> setProducts(data.results));
+}
+
   return (
    <>
    <section className="container mt-4">
@@ -11,12 +42,13 @@ const AllProducts = () => {
              <h3 className="mb-4">All Products <a href="#" className="float-end btn btn-dark">View All Products <i className="fa-solid fa-arrow-right-long"></i></a></h3>
           <div className="row mb-4">
             {/* product box */}
-              <SingleProduct title="Django Product" />
-              <SingleProduct title="Django Product"/>
-              <SingleProduct title="Django Product"/>
-              <SingleProduct title="Django Product"/>
-              <SingleProduct title="Django Product"/>
 
+
+            {
+              Products.map((product,index)=> <SingleProduct key={index} product={product} />)
+            }
+             
+   
             {/* product box end */}
 
 

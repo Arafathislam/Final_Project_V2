@@ -35,6 +35,11 @@ import  SellerLogin from './components/Seller/SellerLogin';
 import  SellerDashboard from './components/Seller/SellerDashboard';
 import SellerProducts from './components/Seller/SellerProducts';
 import SellerAddProducts from './components/Seller/SellerAddProducts';
+import VendorOrders from './components/Seller/VendorOrders';
+import Customers from './components/Seller/Customers';
+import Reports from './components/Seller/Reports';
+import VendorProfile from './components/Seller/VendorProfile';
+import VendorChangePass from './components/Seller/VendorChangePass';
 
 function App() {
   return (
@@ -73,6 +78,11 @@ function App() {
         <Route path='/seller/dashboard' element={<SellerDashboard/>}/>
         <Route path='/seller/products' element={<SellerProducts/>}/>
         <Route path='/seller/addproducts' element={<SellerAddProducts/>}/>
+        <Route path='/seller/orders' element={<VendorOrders/>}/>
+        <Route path='/seller/customers' element={<Customers/>}/>
+        <Route path='/seller/reports' element={<Reports/>}/>
+        <Route path='/seller/profile' element={<VendorProfile/>}/>
+        <Route path='/seller/changepassword' element={<VendorChangePass/>}/>
 
 
 
