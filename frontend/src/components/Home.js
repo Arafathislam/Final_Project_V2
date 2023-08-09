@@ -4,6 +4,32 @@ import AllProducts from './AllProducts'
 import SingleProduct from './SingleProduct'
 import { Link } from 'react-router-dom'
 const Home = () => {
+
+const products=[
+
+  {
+    'title':'Product 1',
+    'price':3232
+  },
+
+  {
+    'title':'Product 2',
+    'price':4232
+  },
+
+  {
+    'title':'Product 3',
+    'price':32320
+  },
+
+  {
+    'title':'Product 4',
+    'price':3232
+  },
+]
+
+
+
   return (
     <>
       <main className="mt-4">
@@ -11,16 +37,13 @@ const Home = () => {
           {/* Latest Product */}
           <h3 className="mb-4">Latest Products <Link to="/products" className="float-end btn btn-dark">View All Products <i className="fa-solid fa-arrow-right-long"></i></Link></h3>
           <div className="row mb-4">
+          {
+            products.map((product, index) => <SingleProduct key={index} product={product} />)
+          }
 
 
             {/* product box */}
-            <SingleProduct title="Flask"/>
-            <SingleProduct title="Django Product 1" />
-            <SingleProduct title="Django Product 2" />
-            <SingleProduct title="Django Product 3" />
-            <SingleProduct title="Django Product 4" />
-            <SingleProduct title="Django Product 5" />
-
+    
             {/* product box end */}
 
           </div>
