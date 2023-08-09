@@ -83,7 +83,7 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE':'django.db.backends.postgresql',
-        'NAME':'my_pgdb',
+        'NAME':'mydb',
         'USER':'postgres',
         'PASSWORD':'arafath1234',
         'HOST':'localhost',
@@ -144,7 +144,7 @@ REST_FRAMEWORK = {
     # 'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
     'DEFAULT_PAGINATION_CLASS': 'main.pagination.CustomPagination',
     
-    'PAGE_SIZE':10,
+    'PAGE_SIZE':1,
 }
 
 
