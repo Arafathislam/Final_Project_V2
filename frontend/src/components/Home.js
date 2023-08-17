@@ -7,23 +7,23 @@ const Home = () => {
 
 const products=[
 
-  {
-    'title':'Product 1',
+  {'id':1,
+    'title':'Laptop',
     'price':3232
   },
 
-  {
-    'title':'Product 2',
+  {'id':2,
+    'title':'Pc',
     'price':4232
   },
 
-  {
-    'title':'Product 3',
+  {'id':3,
+    'title':'Car',
     'price':32320
   },
 
   {
-    'title':'Product 4',
+    'title':'vOLVO',
     'price':3232
   },
 ]
@@ -38,7 +38,7 @@ const products=[
           <h3 className="mb-4">Latest Products <Link to="/products" className="float-end btn btn-dark">View All Products <i className="fa-solid fa-arrow-right-long"></i></Link></h3>
           <div className="row mb-4">
           {
-            products.map((product, index) => <SingleProduct key={index} product={product} />)
+            products && products.map((product) => <SingleProduct  product={product} />)
           }
 
 
