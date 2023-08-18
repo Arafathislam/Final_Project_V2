@@ -9,7 +9,8 @@ const products=[
 
   {'id':1,
     'title':'Laptop',
-    'price':3232
+    'price':3232,
+    'image':{logo},
   },
 
   {'id':2,

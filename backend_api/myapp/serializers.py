@@ -45,7 +45,7 @@ class ProductDetailsSerializer(serializers.ModelSerializer):
     product_imgs=ProductImageSerializer(many=True,read_only=True)
     class Meta:
         model=models.Product
-        fields=['id','category','vendor','title','detail','price','product_ratings','product_imgs','tag_list']
+        fields=['id','category','vendor','title','detail','price','product_ratings','product_imgs','tag_list','demo_url']
 
     def __init__(self,*args,**kwargs):
         super(ProductDetailsSerializer,self).__init__(*args,**kwargs)

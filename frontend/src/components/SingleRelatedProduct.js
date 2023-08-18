@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../src/logo.svg'
-const SingleProduct = (props) => {
+const SingleRelatedProduct = (props) => {
   return (
     <>
     
                 {/* product box */}
-                <div className="col-12 col-md-3 mb-4">
-              <div className="card shadow">
+                <div className="col-4 offset-4 mb-4">
+              <div className="card ">
                 <Link to={`/product/${props.product.title}/${props.product.id}`}>
                   <img src={props.product.image} className="card-img-top" alt="..." />
                   </Link>
@@ -30,4 +30,4 @@ const SingleProduct = (props) => {
   )
 }
 
-export default SingleProduct
+export default SingleRelatedProduct

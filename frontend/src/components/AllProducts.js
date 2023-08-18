@@ -30,8 +30,18 @@ fetchData(baseurl);
 }
 
   var links = [];
+  var limit=3;
+  var totalLink=0;
   
-  for (let i = 1; i <= totalResult; i++) {
+    if(limit%2==0){
+      totalLink=totalResult/limit;
+   }else{
+      totalLink=totalResult/limit + 1;
+   }
+  
+
+  
+  for (let i = 1; i <= totalLink; i++) {
     links.push(<li className="page-item"><Link className='page-link' onClick={()=>changeUrl(baseUrl+`/products/?page=${i}`)} to={`/products/?page=${i}`}>{i}</Link></li>)
   }
 

@@ -16,6 +16,7 @@ urlpatterns = [
     path('products/',views.ProductList.as_view() ),
     path('products/<str:tag>',views.TagProductList.as_view() ),
     path('product/<int:pk>/',views.ProductDetails.as_view() ),
+    path('related-product/<int:pk>/',views.RelatedProductList.as_view() ),
     #categories
     path('categories/',views.CategoryList.as_view() ),
     path('category/<int:pk>/',views.CategoryDetails.as_view() ),
