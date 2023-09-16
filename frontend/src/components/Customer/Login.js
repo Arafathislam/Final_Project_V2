@@ -1,7 +1,32 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../../../src/logo.svg'
+import { useState } from 'react'
 const Login= (props) => {
+
+    const [loginFormData,setLoginFormData]=useState({
+        "username":'',
+        "password":''
+    });
+
+    const inputHandler =(event)=>{
+        setLoginFormData({
+            ...loginFormData,
+            [event.target.name]:event.target.value
+        })
+    };
+
+
+
+    const submitHandler =(event)=>{
+      const  formData=new FormData();
+        formData.append('username',loginFormData.username);
+        formData.append('password',loginFormData.password);
+
+        console.log(formData);
+    };
+
+    const buttonEnable=(loginFormData.username!=='') &&(loginFormData.password!=='')
+
+
     return (
         <>
             <div className="container mt-4">
@@ -17,15 +42,15 @@ const Login= (props) => {
 
 
                                         <div className="mb-3">
-                                            <label for="username" className="form-label">User Name</label>
-                                            <input type="text" className="form-control" id="username" />
+                                            <label htmlFor="username" className="form-label">User Name</label>
+                                            <input type="text" name="username" onChange={inputHandler} value={loginFormData.username}  className="form-control" id="username" />
                                                 
                                         </div>
                                         <div className="mb-3">
-                                            <label for="password" className="form-label">Password</label>
-                                            <input type="password" className="form-control" id="password"/>
+                                            <label htmlFor="password" className="form-label">Password</label>
+                                            <input type="password" onChange={inputHandler} value={loginFormData.password}  name="password" className="form-control" id="password"/>
                                         </div>
-                                        <button type="submit" className="btn btn-primary">Login</button>
+                                        <button type="button"  disabled={!buttonEnable} onClick={submitHandler}  className="btn btn-primary">Login</button>
                                     </form>
                                 </div>
                             </div>
@@ -42,4 +67,4 @@ const Login= (props) => {
     )
 }
 
-export default Login
+export default Login;
